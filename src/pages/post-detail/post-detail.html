@@ -13,9 +13,11 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
-  <div *ngIf="selectedItem" class="selection">
+  <img src="http://placehold.it/500x500"  class="hero-img"/>
+
+  <div *ngIf="selectedItem" class="selection" padding>
     <h2 [innerHTML]="selectedItem.title.rendered"></h2>
     <div [innerHTML]="selectedItem.content.rendered"></div>
   </div>

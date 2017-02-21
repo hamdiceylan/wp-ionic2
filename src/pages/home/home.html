@@ -6,9 +6,13 @@
 
 <ion-content class="home">
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+    <ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+      <ion-thumbnail item-left>
+        <img src="http://placehold.it/100x100" alt="placeholder image">
+      </ion-thumbnail>
       <h2 [innerHTML]="item.title.rendered"></h2>
       <p [innerHTML]="item.excerpt.rendered"></p>
-    </button>
+    </ion-item>
   </ion-list>
+
 </ion-content>
