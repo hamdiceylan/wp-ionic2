@@ -9,14 +9,26 @@ import { TabsPage } from '../pages/tabs/tabs';
   templateUrl: 'app.html'
 })
 export class MyApp {
+
   rootPage = TabsPage;
+  menuItems: any;
 
   constructor(platform: Platform) {
+
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
       Splashscreen.hide();
     });
+
+    this.menuItems = [
+      {"title": "Home","icon": "home"},
+      {"title": "Categories","icon": "albums"},
+      {"title": "Saved Articles","icon": "bookmark"},
+      {"title": "About","icon": "information"},
+      {"title": "Help","icon": "help"}
+    ]
   }
+
 }

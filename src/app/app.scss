@@ -14,3 +14,21 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+// side menu
+ion-menu {
+  ion-content {
+    ion-item.profile-image {
+      height: 250px;
+      ion-avatar {
+        height: 175px;
+        width: 175px;
+        margin: auto;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

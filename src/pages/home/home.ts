@@ -14,8 +14,8 @@ import { PostDetailPage } from '../post-detail/post-detail';
 })
 export class HomePage {
 
-  url: string = 'http://localhost:8888/wordpress/wp-json/wp/v2/posts';
-  // url: string = 'http://www.arabakarsilastirma.org/wp-json/wp/v2/posts';
+  // url: string = 'http://localhost:8888/wordpress/wp-json/wp/v2/posts';
+  url: string = 'http://www.arabakarsilastirma.org/wp-json/wp/v2/posts';
   items: any;
   page: any;
 
@@ -25,7 +25,7 @@ export class HomePage {
 
   ionViewDidEnter() {
     this.page = 1
-    
+
     this.http.get(this.url)
       .map(res => res.json())
       .subscribe(data => {
