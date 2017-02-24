@@ -22,4 +22,27 @@
     <div [innerHTML]="selectedItem.content.rendered"></div>
   </div>
 
+  <ion-fab right bottom>
+    <button ion-fab color="secondary">
+      <ion-icon name="arrow-dropleft"></ion-icon>
+    </button>
+    <ion-fab-list side="left">
+      <!--Share article-->
+      <button ion-fab (click)="shareArticle()">
+        <ion-icon name="share"></ion-icon>
+      </button>
+
+      <!--Save Article-->
+      <button ion-fab (click)="saveArticle()">
+        <ion-icon name="bookmark"></ion-icon>
+      </button>
+
+      <!--Comment on Article-->
+      <button ion-fab (click)="commentArticle()">
+        <ion-icon name="chatbubbles"></ion-icon>
+      </button>
+
+    </ion-fab-list>
+  </ion-fab>
+
 </ion-content>

@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-
 import { NavController } from 'ionic-angular';
-
 import { Http } from '@angular/http';
 
 import 'rxjs/add/operator/map';
@@ -19,11 +17,13 @@ export class HomePage {
   items: any;
   page: any;
 
-  constructor(public navCtrl: NavController, private http: Http) {
-
+  constructor(
+    public navCtrl: NavController,
+    private http: Http) {
   }
 
   ionViewDidEnter() {
+    console.log("ionViewDidEnter");
     this.page = 1
 
     this.http.get(this.url)
@@ -33,7 +33,7 @@ export class HomePage {
       });
   }
 
-  itemTapped(event, item) {
+  seeArticle(item) {
     this.navCtrl.push(PostDetailPage, {
       item: item
     });

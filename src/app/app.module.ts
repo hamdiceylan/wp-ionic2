@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { PostDetailPage } from '../pages/post-detail/post-detail';
+import { CommentsPage } from '../pages/modals/comments/comments';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -14,7 +15,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     ContactPage,
     HomePage,
     TabsPage,
-    PostDetailPage
+    PostDetailPage,
+    CommentsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -26,7 +28,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     ContactPage,
     HomePage,
     TabsPage,
-    PostDetailPage
+    PostDetailPage,
+    CommentsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

@@ -26,7 +26,7 @@ export class MyApp {
       {"title": "Home","icon": "home"},
       {"title": "Categories","icon": "albums"},
       {"title": "Saved Articles","icon": "bookmark"},
-      {"title": "About","icon": "information"},
+      {"title": "About","icon": "information-circled"},
       {"title": "Help","icon": "help"}
     ]
   }
