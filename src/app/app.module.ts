@@ -7,6 +7,7 @@ import { PostDetailPage } from '../pages/post-detail/post-detail';
 import { CommentsPage } from '../pages/modals/comments/comments';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { PostsService } from '../providers/posts-service'
 
 @NgModule({
   declarations: [
@@ -31,6 +32,9 @@ import { TabsPage } from '../pages/tabs/tabs';
     PostDetailPage,
     CommentsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    PostsService,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    ]
 })
 export class AppModule {}
