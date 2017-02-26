@@ -14,9 +14,7 @@
 
 
 <ion-content>
-
-  <img src="http://placehold.it/500x500"  class="hero-img"/>
-
+  <thumbnail-helper [url]="selectedItem.thumbnailUrl"></thumbnail-helper>
   <div *ngIf="selectedItem" class="selection" padding>
     <h2 [innerHTML]="selectedItem.title.rendered"></h2>
     <div [innerHTML]="selectedItem.content.rendered"></div>
