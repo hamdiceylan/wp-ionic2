@@ -24,14 +24,16 @@ export class HomePage {
   ionViewDidEnter() {
     console.log("ionViewDidEnter");
     this.page = 1;
+
+    this.loadPosts();
+  }
+
+  loadPosts() {
     this.postsService.getPosts()
     .subscribe(response => {
       this.items = response;
       console.log('this.items: ', this.items);
     });
-  }
-
-  loadPosts() {
   }
 
   seeArticle(item) {
