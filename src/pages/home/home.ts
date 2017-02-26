@@ -32,7 +32,6 @@ export class HomePage {
     this.postsService.getPosts()
     .subscribe(response => {
       this.items = response;
-      console.log('this.items: ', this.items);
     });
   }
 

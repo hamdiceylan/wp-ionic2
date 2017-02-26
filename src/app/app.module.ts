@@ -7,7 +7,8 @@ import { PostDetailPage } from '../pages/post-detail/post-detail';
 import { CommentsPage } from '../pages/modals/comments/comments';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { PostsService } from '../providers/posts-service'
+import { PostsService } from '../providers/posts-service';
+import { PostCommentsService } from '../providers/post-comments';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { PostsService } from '../providers/posts-service'
   ],
   providers: [
     PostsService,
+    PostCommentsService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
     ]
 })

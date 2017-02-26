@@ -1,13 +1,15 @@
 import { ViewController, NavParams } from 'ionic-angular';
 import { Component } from '@angular/core';
-import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { PostCommentsService } from '../../../providers/post-comments';
 
 
 @Component({
   selector: 'comments',
-  templateUrl: 'comments.html'
-
+  templateUrl: 'comments.html',
+  providers: [
+    PostCommentsService
+  ]
 })
 
 export class CommentsPage {
@@ -18,19 +20,20 @@ export class CommentsPage {
   constructor(
     public navParams: NavParams,
     public viewCtrl: ViewController,
-    private http: Http
+    public postCommentsService: PostCommentsService
     ) {
 
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CommentsPage');
-    this.http.get(this.url)
-      .map(res => res.json())
-      .subscribe(data => {
-        this.comments = data;
-        console.log('data: ', data);
-      });
+    this.loadComments();
+  }
+
+  loadComments() {
+    this.postCommentsService.getComments()
+    .subscribe(response => {
+      this.comments = response;
+    })
   }
 
   closeComments() {
