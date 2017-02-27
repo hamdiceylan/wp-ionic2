@@ -2,6 +2,8 @@ import { ViewController, NavParams } from 'ionic-angular';
 import { Component } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { PostCommentsService } from '../../../providers/post-comments';
+import * as _ from 'lodash';
+
 
 
 @Component({
@@ -15,6 +17,7 @@ import { PostCommentsService } from '../../../providers/post-comments';
 export class CommentsPage {
 
   comments: any;
+  commentsLength: any;
   url: string = './assets/comments-mock-data.json';
 
   constructor(
@@ -33,6 +36,7 @@ export class CommentsPage {
     this.postCommentsService.getComments()
     .subscribe(response => {
       this.comments = response;
+      this.commentsLength = _.size(this.comments);
     })
   }
 

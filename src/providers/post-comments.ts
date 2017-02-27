@@ -3,25 +3,23 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
-  Generated class for the GetPosts provider.
+  Generated class for the PostComments provider.
 
   See https://angular.io/docs/ts/latest/guide/dependency-injection.html
   for more info on providers and Angular 2 DI.
 */
 @Injectable()
-export class PostsService {
+export class PostCommentsService {
 
-  // url: string = 'http://localhost:8888/wordpress/wp-json/wp/v2/posts';
-  url: string = 'http://www.arabakarsilastirma.org/wp-json/wp/v2/posts';
-  data: any;
+  comments: any;
+  url: string = '../assets/comments-mock-data.json';
 
-  constructor(private http: Http) {
-
+  constructor(public http: Http) {
   }
 
-  getPosts() {
+  getComments() {
     return this.http.get(this.url)
       .map(res => res.json());
-  }
+    }
 
 }
