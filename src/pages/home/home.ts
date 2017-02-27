@@ -1,24 +1,27 @@
+import { PostDetailPage } from './../../components/post-detail/post-detail';
+import { Wp } from './../../providers/wp';
+import { Http } from '@angular/http';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import 'rxjs/add/operator/map';
-import { PostsService } from '../../providers/posts-service';
-import { PostDetailPage } from '../post-detail/post-detail';
 
 @Component({
   selector: 'page-home',
   providers: [
-    PostsService
+    Wp
   ],
   templateUrl: 'home.html'
 })
 export class HomePage {
+
+  posts: any;
   page: any;
   items: any;
 
   constructor(
     public navCtrl: NavController,
-    public postsService: PostsService) {
-
+    private http: Http,
+    public wp: Wp) {
   }
 
   ionViewDidEnter() {
@@ -29,10 +32,13 @@ export class HomePage {
   }
 
   loadPosts() {
-    this.postsService.getPosts()
-    .subscribe(response => {
-      this.items = response;
-    });
+    this.wp.getPosts()
+      .subscribe(posts => {
+        posts.forEach(element => {
+          element.thumbnailUrl = element._links["wp:featuredmedia"][0].href;
+        });
+        this.posts = posts;
+    })
   }
 
   seeArticle(item) {

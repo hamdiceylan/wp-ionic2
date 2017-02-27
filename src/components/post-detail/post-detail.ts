@@ -1,9 +1,9 @@
+import { CommentsPage } from './../../pages/modals/comments/comments';
 import { Component } from '@angular/core';
 import { ModalController, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-import { CommentsPage } from '../modals/comments/comments';
 
 
 /*

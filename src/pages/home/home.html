@@ -9,12 +9,12 @@
 
 <ion-content class="home">
   <ion-list>
-    <ion-item *ngFor="let item of items" (click)="seeArticle(item)" text-wrap>
+    <ion-item *ngFor="let post of posts" (click)="seeArticle(post)">
       <ion-thumbnail item-left>
-        <img src="http://placehold.it/100x100" alt="placeholder image">
-      </ion-thumbnail>
-      <h2 [innerHTML]="item.title.rendered"></h2>
-      <p [innerHTML]="item.excerpt.rendered"></p>
+        <thumbnail-helper [url]="post.thumbnailUrl"></thumbnail-helper>
+        </ion-thumbnail>		        
+      <h2 [innerHTML]="post.title.rendered"></h2>
+      <p [innerHTML]="post.excerpt.rendered"></p>
     </ion-item>
   </ion-list>
 
