@@ -2,6 +2,7 @@ import { CommentsPage } from './../../pages/modals/comments/comments';
 import { Component } from '@angular/core';
 import { ModalController, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
+import { SocialSharing } from 'ionic-native';
 import 'rxjs/add/operator/map';
 
 
@@ -25,7 +26,8 @@ export class PostDetailPage {
   constructor (
     public modalCtrl: ModalController,
     public navCtrl: NavController,
-    public navParams: NavParams
+    public navParams: NavParams,
+
     ) {
     this.selectedItem = navParams.get('item');
   }
@@ -35,11 +37,22 @@ export class PostDetailPage {
   }
 
   shareArticle() {
-    console.log("shareAricle clicked");
+    console.log("shareArticle clicked");
+
+    let options: any = {
+      message: "Testing, sharing this from inside an app I'm building right now",
+      subject: null,
+      file: "https://i.ytimg.com/vi/c8nFduO7gX8/maxresdefault.jpg", 
+      url: null
+    };
+
+    SocialSharing.share(options);
+
   }
 
   saveArticle() {
     console.log("saveArticle clicked");
+
   }
 
   commentArticle() {
