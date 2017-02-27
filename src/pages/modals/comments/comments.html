@@ -8,7 +8,9 @@
 
   <ion-navbar>
 
-    <ion-title>Comments ()</ion-title>
+    <ion-title>
+      <h4 [textContent]="'Comments (' + this.commentsLength + ')'"></h4>
+    </ion-title>
 
     <ion-buttons end>
       <button ion-button icon-only (click)="closeComments()">
@@ -23,7 +25,7 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let comment of comments">
+    <ion-item *ngFor="let comment of comments" text-wrap>
       <ion-thumbnail item-left>
         <img src="{{ comment.author_avatar }}" alt="placeholder image">
       </ion-thumbnail>
