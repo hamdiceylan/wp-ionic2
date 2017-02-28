@@ -1,3 +1,4 @@
+import { CommentsComponent } from './../components/comments/comments';
 import { CommentsPage } from './../pages/modals/comments/comments';
 import { PostDetailPage } from './../components/post-detail/post-detail';
 import { ThumbnailHelperComponent } from './../components/thumbnail-helper/thumbnail-helper';
@@ -20,7 +21,8 @@ import { PostCommentsService } from '../providers/post-comments';
     TabsPage,
     PostDetailPage,
     CommentsPage,
-    ThumbnailHelperComponent
+    ThumbnailHelperComponent,
+    CommentsComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -33,7 +35,8 @@ import { PostCommentsService } from '../providers/post-comments';
     HomePage,
     TabsPage,
     PostDetailPage,
-    CommentsPage
+    CommentsPage,
+    CommentsComponent
   ],
   providers: [
     Wp,

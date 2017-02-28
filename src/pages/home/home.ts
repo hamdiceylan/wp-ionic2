@@ -38,8 +38,10 @@ export class HomePage {
       .subscribe(posts => {
         posts.forEach(element => {
           element.thumbnailUrl = element._links["wp:featuredmedia"][0].href;
+          element.commentUrl = element._links["replies"][0].href;
         });
         this.posts = posts;
+        console.log(posts);
     })
   }
 
