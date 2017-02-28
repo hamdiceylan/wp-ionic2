@@ -12,6 +12,9 @@ $font-path: "../assets/fonts";
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
+// Toolbar
+$toolbar-background:      #fff;
+
 
 
 
@@ -78,3 +81,5 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+@import "./custom"
