@@ -1,4 +1,4 @@
-import { CommentsPage } from './../../pages/modals/comments/comments';
+import { CommentsComponent } from './../comments/comments';
 import { Component } from '@angular/core';
 import { ModalController, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
@@ -56,8 +56,8 @@ export class PostDetailPage {
   }
 
   commentArticle() {
-    console.log("commentArticle clicked");
-    let modal = this.modalCtrl.create(CommentsPage,{});
+    console.log(this.selectedItem.commentUrl);
+    let modal = this.modalCtrl.create(CommentsComponent,{commentUrl: this.selectedItem.commentUrl });
     modal.present();
   }
 

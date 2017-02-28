@@ -11,7 +11,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class Wp {
 
-  apiEndPoint: string = "http://www.onurtestsurusunde.com/wp-json/wp/v2/";
+  apiEndPoint: string = "http://www.arabakarsilastirma.org/wp-json/wp/v2/";
 
   constructor(public http: Http) {
   }
@@ -23,6 +23,11 @@ export class Wp {
 
   getThumbnailFromUrl(mediaUrl) {
     return this.http.get(mediaUrl)
+      .map(res => res.json())
+  }
+
+  getCommentsFromUrl(commentUrl) {
+    return this.http.get(commentUrl)
       .map(res => res.json())
   }
 }
