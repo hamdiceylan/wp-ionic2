@@ -1,6 +1,39 @@
+// no border on toolbar
 ion-header {
+  // android
   &::after {
     background-image: none !important
     ;
   }
+  // ios
+  .toolbar-background {
+    border-style: none !important;
+  }
 }
+
+// card styling
+ion-card {
+  position: relative;
+  .gradient-filter {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top ,black, rgba(255, 255, 255, 0));
+  }
+  .post-detail-container {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+    h2 {
+      color: white !important;
+    }
+    p {
+      color: lightgrey !important;
+    }
+  }
+}
+

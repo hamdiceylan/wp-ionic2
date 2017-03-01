@@ -1,4 +1,4 @@
-import { NavParams } from 'ionic-angular';
+import { ViewController, NavParams } from 'ionic-angular';
 import { Wp } from './../../providers/wp';
 import { Component } from '@angular/core';
 
@@ -19,6 +19,7 @@ export class CommentsComponent {
   commentsLength:number;
 
   constructor(public wp:Wp,
+      public viewCtrl: ViewController,
       public navParams: NavParams) {
       this.commentUrl = navParams.get('commentUrl');
       this.wp.getCommentsFromUrl(this.commentUrl)
@@ -26,10 +27,12 @@ export class CommentsComponent {
         console.log(comments)
         this.commentsLength = comments.length;
         this.comments = comments;
-    })  
+    })
   }
 
+  closeComments() {
+    this.viewCtrl.dismiss();
+  }
 
-  
 
 }
