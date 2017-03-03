@@ -23,6 +23,7 @@ export class HomePage {
     public navCtrl: NavController,
     private http: Http,
     public wp: Wp) {
+
   }
 
   ionViewWillEnter () {
@@ -41,7 +42,6 @@ export class HomePage {
           element.commentUrl = element._links["replies"][0].href;
         });
         this.posts = posts;
-        console.log(posts);
     })
   }
 

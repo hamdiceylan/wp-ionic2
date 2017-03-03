@@ -2,6 +2,7 @@ import { CommentsComponent } from './../components/comments/comments';
 import { CommentsPage } from './../pages/modals/comments/comments';
 import { PostDetailPage } from './../components/post-detail/post-detail';
 import { ThumbnailHelperComponent } from './../components/thumbnail-helper/thumbnail-helper';
+import { SliderComponent } from './../components/slider/slider';
 import { Wp } from './../providers/wp';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -22,6 +23,7 @@ import { PostCommentsService } from '../providers/post-comments';
     PostDetailPage,
     CommentsPage,
     ThumbnailHelperComponent,
+    SliderComponent,
     CommentsComponent
   ],
   imports: [

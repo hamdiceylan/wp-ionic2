@@ -1,6 +1,6 @@
-import { Auth } from './auth';
+// import { Auth } from './auth';
 import { Injectable } from '@angular/core';
-import { Http, Headers, RequestOptions } from '@angular/http';
+import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 /*
   Generated class for the Wp provider.
