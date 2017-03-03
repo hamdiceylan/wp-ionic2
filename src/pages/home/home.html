@@ -10,7 +10,7 @@
 <ion-content class="home">
   <ion-grid>
     <ion-row wrap>
-      <ion-col width-50 *ngFor="let post of posts" (click)="seeArticle(post)" no-padding>
+      <ion-col width-50 *ngFor="let post of posts" (click)="seeArticle(post)">
         <ion-card>
           <thumbnail-helper [url]="post.thumbnailUrl"></thumbnail-helper>
           <div class="gradient-filter"></div>
