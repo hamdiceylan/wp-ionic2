@@ -11,13 +11,23 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class Wp {
 
-  apiEndPoint: string = "http://www.arabakarsilastirma.org/wp-json/wp/v2/";
+  apiEndPoint: string = "http://www.otomobilkampanyalar.com/wp-json/wp/v2/";
 
   constructor(public http: Http) {
   }
 
   getPosts() {
     return this.http.get(this.apiEndPoint + 'posts')
+      .map(res => res.json())
+  }
+
+  getCategories() {
+    return this.http.get(this.apiEndPoint + 'categories')
+      .map(res => res.json())
+  }
+
+  getPages() {
+    return this.http.get(this.apiEndPoint + 'pages')
       .map(res => res.json())
   }
 
