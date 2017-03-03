@@ -8,14 +8,19 @@
 </ion-header>
 
 <ion-content class="home">
-
-  <ion-card *ngFor="let post of posts" (click)="seeArticle(post)">
-    <thumbnail-helper [url]="post.thumbnailUrl"></thumbnail-helper>
-    <div class="gradient-filter"></div>
-    <div class="post-detail-container" padding>
-      <h2 class="post-title" [innerHTML]="post.title.rendered"></h2>
-      <p class="author" >Omni Sovereign</p>
-    </div>
-  </ion-card>
+  <ion-grid>
+    <ion-row wrap>
+      <ion-col width-50 *ngFor="let post of posts" (click)="seeArticle(post)" no-padding>
+        <ion-card>
+          <thumbnail-helper [url]="post.thumbnailUrl"></thumbnail-helper>
+          <div class="gradient-filter"></div>
+          <div class="post-detail-container" padding>
+            <h2 class="post-title" [innerHTML]="post.title.rendered"></h2>
+            <p class="author" >Omni Sovereign</p>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

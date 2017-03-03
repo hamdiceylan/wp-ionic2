@@ -15,7 +15,6 @@ import 'rxjs/add/operator/map';
 })
 export class HomePage {
 
-
   posts: any;
   page: any;
   items: any;
@@ -26,11 +25,12 @@ export class HomePage {
     public wp: Wp) {
   }
 
-  ionViewDidEnter() {
-    console.log("ionViewDidEnter");
+  ionViewWillEnter () {
     this.page = 1;
-
     this.loadPosts();
+  }
+
+  ionViewDidEnter() {
   }
 
   loadPosts() {
