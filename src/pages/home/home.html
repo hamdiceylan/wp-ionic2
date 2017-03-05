@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content class="home">
-  <slider></slider>
+  <slider [newestPost]="posts">Loading...</slider>
 
 
   <ion-grid>
@@ -18,7 +18,7 @@
           <thumbnail-helper [url]="post.thumbnailUrl"></thumbnail-helper>
           <div class="gradient-filter"></div>
           <div class="post-detail-container" padding>
-            <h2 class="post-title" [innerHTML]="post.title.rendered"></h2>
+            <h2 class="post-title" [innerText]="post.title.rendered"></h2>
             <!--<p class="author" >Omni Sovereign</p>-->
           </div>
         </ion-card>

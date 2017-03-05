@@ -1,36 +1,21 @@
-import { Component } from '@angular/core';
-import { Wp } from './../../providers/wp';
+import { Component, Input } from '@angular/core';
 
-
-/*
-  Generated class for the Slider component.
-
-  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
-  for more info on Angular 2 Components.
-*/
 @Component({
   selector: 'slider',
-  templateUrl: 'slider.html',
-  providers: [Wp]
+  templateUrl: 'slider.html'
 })
+
 export class SliderComponent {
 
-  sliderImage: any;
-  posts: any;
-  featuredPost: any;
+  @Input() newestPost: any;
 
-  constructor(public wp: Wp) {
+  constructor() {
+    console.log('this.newestPost', this.newestPost)
   }
 
-  ngOnInit(changes) {
-      this.wp.getPosts()
-      .subscribe(response => {
-        this.posts = response;
-        this.featuredPost = this.posts[0];
-        console.log('this.featuredPost: ', this.featuredPost);
-      });
-  }
+  ionViewDidEnter() {
 
+  }
 
 
 }

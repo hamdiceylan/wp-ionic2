@@ -1,4 +1,4 @@
-import { PostCommentsService } from './../../providers/post-comments';
+// import { PostCommentsService } from './../../providers/post-comments';
 import { PostDetailPage } from './../../components/post-detail/post-detail';
 import { Wp } from './../../providers/wp';
 import { Http } from '@angular/http';
@@ -32,6 +32,7 @@ export class HomePage {
   }
 
   ionViewDidEnter() {
+
   }
 
   loadPosts() {

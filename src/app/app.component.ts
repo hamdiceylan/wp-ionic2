@@ -31,7 +31,6 @@ export class MyApp {
             title:element.title.rendered,
             icon:"home"
           };
-          console.log(item)
           this.menuItems.push(item);
         });
     })
@@ -42,7 +41,6 @@ export class MyApp {
             title:element.name,
             icon:"home"
           };
-          console.log(item)
           this.menuItems.push(item);
         });
     })

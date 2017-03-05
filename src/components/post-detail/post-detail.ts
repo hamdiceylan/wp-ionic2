@@ -56,7 +56,6 @@ export class PostDetailPage {
   }
 
   commentArticle() {
-    console.log(this.selectedItem.commentUrl);
     let modal = this.modalCtrl.create(CommentsComponent,{commentUrl: this.selectedItem.commentUrl });
     modal.present();
   }
