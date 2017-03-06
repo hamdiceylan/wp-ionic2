@@ -1,9 +1,9 @@
-<ion-row>
-  <ion-col >
+<ion-row *ngIf="newestPost">
+  <ion-col *ngFor="let p of newestPost">
     <ion-card>
       <div class="gradient-filter"></div>
       <div class="post-detail-container" padding>
-        <!--<h2 class="post-title" [innerText]="p.title"></h2>-->
+        <h2 class="post-title" [innerText]="p.title.rendered"></h2>
       </div>
     </ion-card>
   </ion-col>

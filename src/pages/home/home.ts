@@ -1,9 +1,10 @@
 // import { PostCommentsService } from './../../providers/post-comments';
-import { PostDetailPage } from './../../components/post-detail/post-detail';
-import { Wp } from './../../providers/wp';
-import { Http } from '@angular/http';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Wp } from './../../providers/wp';
+import { Http } from '@angular/http';
+import { PostDetailPage } from './../../components/post-detail/post-detail';
+import { SliderComponent } from '../../components/slider/slider';
 import 'rxjs/add/operator/map';
 
 @Component({
@@ -42,7 +43,7 @@ export class HomePage {
           element.thumbnailUrl = element._links["wp:featuredmedia"][0].href;
           element.commentUrl = element._links["replies"][0].href;
         });
-        this.posts = posts;
+        return this.posts = posts;
     })
   }
 

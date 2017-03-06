@@ -10,7 +10,6 @@ export class SliderComponent {
   @Input() newestPost: any;
 
   constructor() {
-    console.log('this.newestPost', this.newestPost)
   }
 
   ionViewDidEnter() {
