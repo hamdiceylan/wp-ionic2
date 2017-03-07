@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'slider',
@@ -8,12 +8,13 @@ import { Component, Input } from '@angular/core';
 export class SliderComponent {
 
   @Input() newestPost: any;
+  @ViewChild(Slides) slides: Slides;
 
   constructor() {
   }
 
-  ionViewDidEnter() {
-
+  goToSlide() {
+    this.slides.slideTo(2, 500)
   }
 
 
