@@ -8,13 +8,13 @@ import { Component, Input, ViewChild } from '@angular/core';
 export class SliderComponent {
 
   @Input() newestPost: any;
-  @ViewChild(Slides) slides: Slides;
+  // @ViewChild(Slides) slides: Slides;
 
   constructor() {
   }
 
   goToSlide() {
-    this.slides.slideTo(2, 500)
+    // this.slides.slideTo(2, 500)
   }
 
 
