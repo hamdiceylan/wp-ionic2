@@ -2,6 +2,7 @@
   <ion-col>
     <ion-slides>
       <ion-slide  *ngFor="let p of newestPost">
+        <thumbnail-helper [url]="p.thumbnailUrl"></thumbnail-helper>
         <div class="gradient-filter"></div>
         <div class="post-detail-container" padding>
           <h2 class="post-title" [innerText]="p.title.rendered"></h2>

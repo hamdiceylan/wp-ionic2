@@ -11,7 +11,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class Wp {
 
-  apiEndPoint: string = "http://www.otomobilkampanyalar.com/wp-json/wp/v2/";
+  apiEndPoint: string = "http://www.otomovi.com/wp-json/wp/v2/";
 
   constructor(public http: Http) {
   }

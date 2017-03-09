@@ -8,6 +8,8 @@ import { Component, Input, ViewChild } from '@angular/core';
 export class SliderComponent {
 
   @Input() newestPost: any;
+  thumbnailImage: any;
+
   // @ViewChild(Slides) slides: Slides;
 
   constructor() {

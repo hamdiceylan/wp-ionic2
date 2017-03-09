@@ -2,4 +2,35 @@ slider {
   ion-col {
     padding: 0px !important;
   }
+  // change default styling
+    .swiper-slide img {
+        width: auto;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+    }
+  // thumbnail-helper {
+  //   img {
+  //     position: absolute;
+  //     top: 0%;
+  //     right: 50%;
+  //     height: 100%;
+  //     width: auto !important;
+  //     max-width: none;
+  //     transform: translateX(50%);
+  //   }
+  // }
+  .post-detail-container {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+    h2 {
+      color: white !important;
+    }
+    p {
+      color: lightgrey !important;
+    }
+  }
 }
