@@ -3,23 +3,17 @@ slider {
     padding: 0px !important;
   }
   // change default styling
-    .swiper-slide img {
-        width: auto;
-        height: 100%;
-        max-width: none;
-        max-height: none;
+  .swiper-slide img {
+      width: auto;
+      height: 100%;
+      max-width: none;
+      max-height: none;
+  }
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      background-color: white;
     }
-  // thumbnail-helper {
-  //   img {
-  //     position: absolute;
-  //     top: 0%;
-  //     right: 50%;
-  //     height: 100%;
-  //     width: auto !important;
-  //     max-width: none;
-  //     transform: translateX(50%);
-  //   }
-  // }
+  }
   .post-detail-container {
     position: absolute;
     bottom: 0px;
@@ -28,6 +22,7 @@ slider {
     z-index: 1;
     h2 {
       color: white !important;
+      text-align: start;
     }
     p {
       color: lightgrey !important;

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { StatusBar } from 'ionic-native';
 import { Wp } from './../../providers/wp';
 import { Http } from '@angular/http';
 import { PostDetailPage } from './../../components/post-detail/post-detail';
@@ -23,7 +24,8 @@ export class HomePage {
     public navCtrl: NavController,
     private http: Http,
     public wp: Wp) {
-
+    StatusBar.overlaysWebView(true);
+    StatusBar.styleBlackTranslucent();
   }
 
   ionViewWillEnter () {
