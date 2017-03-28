@@ -2,4 +2,12 @@ page-post-detail {
   .hero-img {
     width: 100%;
   }
+  ion-content {
+    .scroll-content {
+      margin-top: 0 !important;
+      p {
+        font-size: 20px;
+      }
+    }
+  }
 }
