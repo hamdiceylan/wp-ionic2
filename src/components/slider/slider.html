@@ -1,7 +1,7 @@
 <ion-row *ngIf="newestPost">
   <ion-col>
     <ion-slides [autoplay]="4000" [loop]="true" [pager]="true" [paginationType]="progress">
-      <ion-slide  *ngFor="let p of newestPost">
+      <ion-slide *ngFor="let p of newestPost" (click)="seeArticle(p)">
         <thumbnail-helper [url]="p.thumbnailUrl"></thumbnail-helper>
         <div class="gradient-filter"></div>
         <div class="post-detail-container" padding>

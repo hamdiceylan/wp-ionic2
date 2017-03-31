@@ -1,4 +1,7 @@
 import { Component, Input, ViewChild } from '@angular/core';
+import { NavController } from 'ionic-angular';
+import { PostDetailPage } from './../../components/post-detail/post-detail';
+
 
 @Component({
   selector: 'slider',
@@ -12,11 +15,15 @@ export class SliderComponent {
 
   // @ViewChild(Slides) slides: Slides;
 
-  constructor() {
+  constructor(
+    public navCtrl: NavController
+  ) {
   }
 
-  goToSlide() {
-    // this.slides.slideTo(2, 500)
+  seeArticle(item) {
+    this.navCtrl.push(PostDetailPage, {
+      item: item
+    });
   }
 
 
