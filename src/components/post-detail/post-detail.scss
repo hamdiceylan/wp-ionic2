@@ -4,9 +4,22 @@ page-post-detail {
   }
   ion-content {
     .scroll-content {
+      img {
+        width: 100%;
+      }
+    }
+    .selection {
       margin-top: 0 !important;
       p {
         font-size: 20px;
+        text-indent: 20px;
+        & img {
+          margin-left: -20px;
+        }
+      }
+      img {
+        height: auto;
+        box-shadow: 1px 1px 6px #607D8B;
       }
     }
   }

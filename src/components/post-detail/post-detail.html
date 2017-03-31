@@ -16,8 +16,8 @@
 <ion-content>
   <thumbnail-helper [url]="selectedItem.thumbnailUrl"></thumbnail-helper>
   <div *ngIf="selectedItem" class="selection" padding>
-    <h2 [innerHTML]="selectedItem.title.rendered"></h2>
-    <div [innerHTML]="selectedItem.content.rendered"></div>
+    <h1 [innerHTML]="selectedItem.title.rendered"></h1>
+    <div [innerHTML]="selectedItem.content.rendered" class="main-content"></div>
   </div>
 
   <ion-fab right bottom>
