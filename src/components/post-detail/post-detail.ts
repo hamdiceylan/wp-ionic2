@@ -34,6 +34,7 @@ export class PostDetailPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PostDetailPage');
+    console.log('this.selectedItem: ', this.selectedItem);
   }
 
   shareArticle() {
@@ -42,7 +43,7 @@ export class PostDetailPage {
     let options: any = {
       message: "Testing, sharing this from inside an app I'm building right now",
       subject: null,
-      file: "https://i.ytimg.com/vi/c8nFduO7gX8/maxresdefault.jpg", 
+      file: "https://i.ytimg.com/vi/c8nFduO7gX8/maxresdefault.jpg",
       url: null
     };
 

@@ -37,7 +37,6 @@ ion-header {
     }
   }
 }
-
 .gradient-filter {
   position: absolute;
   top: 0px;
@@ -45,4 +44,7 @@ ion-header {
   height: 100%;
   width: 100%;
   background: linear-gradient(to bottom,rgba(0,0,0,0) 15%,rgba(0,0,0,0.6) 100%);
+}
+.text-muted {
+  color: #999;
 }

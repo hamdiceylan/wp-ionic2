@@ -14,9 +14,15 @@
 
 
 <ion-content>
-  <thumbnail-helper [url]="selectedItem.thumbnailUrl"></thumbnail-helper>
+  <div class="hero-img-container">
+    <thumbnail-helper [url]="selectedItem.thumbnailUrl"></thumbnail-helper>
+    <div class="gradient-filter">
+      <h1 class="post-title" [innerHTML]="selectedItem.title.rendered"></h1>
+    </div>
+
+  </div>
   <div *ngIf="selectedItem" class="selection" padding>
-    <h1 [innerHTML]="selectedItem.title.rendered"></h1>
+    <span class="text-muted"><a href="#">{{ selectedItem.categories }}</a> - {{ selectedItem.modified_gmt | date }}</span>
     <div [innerHTML]="selectedItem.content.rendered" class="main-content"></div>
   </div>
 
