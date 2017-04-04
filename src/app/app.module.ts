@@ -5,7 +5,10 @@ import { ThumbnailHelperComponent } from './../components/thumbnail-helper/thumb
 import { SliderComponent } from './../components/slider/slider';
 import { Wp } from './../providers/wp';
 import { NgModule, ErrorHandler } from '@angular/core';
+
+import { StatusBar } from '@ionic-native/status-bar';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -43,6 +46,7 @@ import { PostCommentsService } from '../providers/post-comments';
   providers: [
     Wp,
     PostCommentsService,
+    StatusBar,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
     ]
 })

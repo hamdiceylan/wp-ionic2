@@ -1,5 +1,7 @@
 page-home {
 
+  @extend %super-bar;
+
   // general UI
   ion-content {
     .fixed-content,
