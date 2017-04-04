@@ -32,3 +32,20 @@ ion-menu {
     }
   }
 }
+
+// Super bar placeholder
+
+%super-bar {
+  .scroll-content {
+    margin-top: 0 !important;
+  }
+
+  ion-header, .toolbar-background {
+    background-color: initial !important;
+    transition: background-color 1s ease;
+
+    &:after {
+      height: 0  !important;
+    }
+  }
+}

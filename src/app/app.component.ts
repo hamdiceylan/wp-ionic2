@@ -1,7 +1,7 @@
 import { Wp } from './../providers/wp';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
-import { StatusBar, Splashscreen } from 'ionic-native';
+import { StatusBar } from '@ionic-native/status-bar';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -14,16 +14,21 @@ export class MyApp {
   rootPage = TabsPage;
   menuItems: any;
 
-  constructor(platform: Platform,
-  wp: Wp) {
+  constructor(
+    platform: Platform,
+    wp: Wp,
+    private statusBar: StatusBar
+    ) {
+
+    this.menuItems = []
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      StatusBar.styleBlackTranslucent();
-      Splashscreen.hide();
+      this.statusBar.overlaysWebView(true);
+      this.statusBar.styleBlackTranslucent();
     });
-    this.menuItems = []
+
     wp.getPages()
       .subscribe(cat => {
         cat.forEach(element => {
@@ -33,7 +38,8 @@ export class MyApp {
           };
           this.menuItems.push(item);
         });
-    })
+    });
+
     wp.getCategories()
       .subscribe(cat => {
         cat.forEach(element => {
@@ -43,9 +49,7 @@ export class MyApp {
           };
           this.menuItems.push(item);
         });
-    })
-
-
+    });
 
   }
 
