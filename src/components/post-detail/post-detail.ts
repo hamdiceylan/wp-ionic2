@@ -2,7 +2,7 @@ import { CommentsComponent } from './../comments/comments';
 import { Component } from '@angular/core';
 import { ModalController, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
-import { SocialSharing } from 'ionic-native';
+import { SocialSharing } from '@ionic-native/social-sharing';
 import 'rxjs/add/operator/map';
 
 
@@ -16,7 +16,10 @@ import 'rxjs/add/operator/map';
 @Component({
   selector: 'page-post-detail',
   templateUrl: 'post-detail.html',
-  providers: [Http]
+  providers: [
+    Http,
+    SocialSharing
+    ]
 })
 
 export class PostDetailPage {
@@ -27,7 +30,7 @@ export class PostDetailPage {
     public modalCtrl: ModalController,
     public navCtrl: NavController,
     public navParams: NavParams,
-
+    private socialSharing: SocialSharing
     ) {
     this.selectedItem = navParams.get('item');
   }
@@ -41,13 +44,13 @@ export class PostDetailPage {
     console.log("shareArticle clicked");
 
     let options: any = {
-      message: "Testing, sharing this from inside an app I'm building right now",
-      subject: null,
-      file: "https://i.ytimg.com/vi/c8nFduO7gX8/maxresdefault.jpg",
-      url: null
+      message: "Check out this article",
+      subject: "I wanted to share this with you: " + this.selectedItem.title.rendered,
+      file: null,
+      url: this.selectedItem.link
     };
 
-    SocialSharing.share(options);
+    this.socialSharing.shareWithOptions(options);
 
   }
 

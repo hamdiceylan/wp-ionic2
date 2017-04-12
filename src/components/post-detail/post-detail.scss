@@ -1,6 +1,9 @@
 page-post-detail {
   .hero-img-container {
     position: relative;
+    .gradient-filter {
+      height: calc(100% - 4px);
+    }
   }
   .hero-img {
     width: 100%;

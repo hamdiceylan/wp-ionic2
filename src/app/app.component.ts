@@ -15,10 +15,10 @@ export class MyApp {
   menuItems: any;
 
   constructor(
-    platform: Platform,
     wp: Wp,
+    platform: Platform,
     private statusBar: StatusBar
-    ) {
+  ) {
 
     this.menuItems = []
 
