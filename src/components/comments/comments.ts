@@ -34,5 +34,9 @@ export class CommentsComponent {
     this.viewCtrl.dismiss();
   }
 
+  postComment() {
+    console.log("Post comment clicked!!");
+  }
+
 
 }
