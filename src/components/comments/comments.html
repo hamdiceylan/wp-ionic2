@@ -36,11 +36,11 @@
 
   <ion-footer>
     <ion-grid>
-      <ion-row>
-        <ion-col width-90 no-padding>
-          <ion-textarea placeholder="Type a message"></ion-textarea>
+      <ion-row align-items-center>
+        <ion-col>
+          <ion-textarea id="comment-textarea" rows="1" placeholder="Type a message" (input)="changeRowHeight()"></ion-textarea>
         </ion-col>
-        <ion-col width-10 no-padding>
+        <ion-col col-auto>
           <button class="transparent-button" ion-button icon-only (click)="postComment()">
             <ion-icon name="send"></ion-icon>
           </button>

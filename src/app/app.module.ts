@@ -1,3 +1,5 @@
+import { BrowserModule } from '@angular/platform-browser'
+import { HttpModule } from '@angular/http'
 import { CommentsComponent } from './../components/comments/comments';
 import { CommentsPage } from './../pages/modals/comments/comments';
 import { PostDetailPage } from './../components/post-detail/post-detail';
@@ -30,7 +32,9 @@ import { PostCommentsService } from '../providers/post-comments';
     CommentsComponent
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    HttpModule,
+    IonicModule.forRoot(MyApp),
+    BrowserModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
